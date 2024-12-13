@@ -45,3 +45,23 @@ Last thoughts:
 	I say that React is quite a lot friendlier than Angular, even after all of its redoes. Angular appears to be quite hacky, at least to my inexperienced hands.
 
 All in all, it was a fun experience.
+
+
+# How to run
+
+To run this project, you will have to first install our node dependencies the old, old fashioned way:
+ 
+ 
+	cd reverbs-backend
+	npm install
+	cd ..
+	cd reverbs-frontend
+	npm install
+ 
+
+and then, you may run the reverbs-backend concurrent command at will:
+
+
+	cd reverbs-backend
+	npm run start:dev
+ 
