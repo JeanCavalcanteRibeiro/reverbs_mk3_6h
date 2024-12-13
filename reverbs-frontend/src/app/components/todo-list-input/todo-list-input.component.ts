@@ -43,5 +43,6 @@ export class TodoListInputComponent {
   onApiKeySet(apiKey: string): void {
     // does nothing since our precious, precious key is forever locked away into our browsers memory, completely unencrypted!
     // this.doesKeyExist = true;
+    location.reload();
   }
 }
