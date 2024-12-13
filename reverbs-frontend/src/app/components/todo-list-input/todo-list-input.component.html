@@ -1,0 +1,54 @@
+<div
+  class="container mx-auto px-4 py-8 flex flex-col items-center justify-center"
+>
+  <div class="flex w-full mb-4">
+    <p>Enter a <span style="font-weight: bold">task</span> below.</p>
+  </div>
+  <div class="flex w-full mb-4">
+    <input
+      type="text"
+      [(ngModel)]="newTodoTitle"
+      (keyup.enter)="onAddTodo()"
+      placeholder="Add a new todo title"
+      class="w-full px-3 py-2 border rounded shadow mb-2"
+    />
+
+    <button
+      (click)="onAddTodo()"
+      class="flex bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    >
+      <span>Add Todo</span>
+    </button>
+  </div>
+  <div class="flex w-full mb-4">
+    <p>
+      To generate descriptions for your to-do tasks, please insert a valid
+      <span style="font-weight: bold">Gemini</span> API key.
+    </p>
+    <p>
+      Once a key is inserted, new buttons will be unlocked to generate the description for our tasks.
+    </p>
+  </div>
+  <div class="flex w-full mb-4">
+    <app-todo-list-gemini-api-key-input
+      (apiKeySet)="onApiKeySet($event)"
+    ></app-todo-list-gemini-api-key-input>
+  </div>
+
+  <div class="flex w-full mb-4">
+    <p>
+      No key?
+      <a
+        href="https://aistudio.google.com/apikey"
+        class="text-blue-500 hover:text-blue-700 font-bold underline target_blank"
+      >
+        Get a free API Key on Google AI Studio
+      </a>
+    </p>
+  </div>
+  <div class="flex w-full mb-4">
+    <p>
+      You may <span style="font-weight: bold">left click</span> a title to edit it.
+    </p>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+h1 {
+    color: var(--black);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: "Dinnextw 1 G", sans-serif;
+    font-size: 3.75rem;
+    font-weight: 600;
+    line-height: 90%;
+} 
+
+h1 span {
+	color: #a175ff;
+    text-shadow: 0 0 6px #b491ff70;
+}
